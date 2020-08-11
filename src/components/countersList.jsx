@@ -17,12 +17,20 @@ class CounterList extends Component {
     );
     this.setState({ counterslistArr: arraylist });
   };
+  resetCounter=()=>{
+    const resetCount=this.state.counterslistArr.map(c=>{
+      c.value=0;
+      return c;
+    })
+    this.setState({counterslistArr:resetCount})
+  }
   render() {
     console.log(this.state.counterslistArr.length);
 
     return (
       <React.Fragment>
-        {this.state.counterslistArr.map((counterarr, index) => (
+    <button className="btn btn-primary btn-sm m-2" onClick={this.resetCounter}>ResetCounter</button>
+       {this.state.counterslistArr.map((counterarr, index) => (
           <span>
             Index :{index}{" "}
             <Counter

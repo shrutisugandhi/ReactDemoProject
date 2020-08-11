@@ -36,7 +36,7 @@ class Counter extends Component {
     fontSize: 16,
     fontWeight: "bold",
   };
-
+ 
   renderTagsArray() {
     if (this.state.tags.length === 0) return null;
 
