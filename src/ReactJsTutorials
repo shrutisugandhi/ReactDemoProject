@@ -1,0 +1,59 @@
+Project reactDummy on counter increment/decrement
+1.Reactjs project installation using create-react-app frontend pipeline
+2.added bootstrap links into index.html
+3.Flow of react
+index.html(id="root")-->index.js-->app.js-->home.js/counter.js using function or classname as tags (
+<Counter/>
+or
+<Home/>
+)
+4.React.fragment to remove unnecessary
+<div>
+tags
+5.Ctrl+d for multicursor changes
+6.Preetify/Simple React Snippets
+7.State object for dynamic data display
+state={
+count:0
+}
+8.destructuring obj using const
+const {count} =this.state;
+9.Shift+alt+f =Format code for react.js
+10.Styling using className static and dynamic
+11. Dynamic rendering of classname on based of count value
+12.Refracturing style class variable in a method
+13.Rendering dynamically list of tags using map method
+https://reactjs.org/docs/lists-and-keys.html#keys
+14.conditional rendering of list
+15.Event handling and binding event handlers <button onClick={ this.increment }
+   eg. increment method will be used asa arrow function
+   increment=()=>{
+}
+instead of using constructor,bind method and super()
+16.setState(objname) to modify value of object
+17.Parameter on methods by using arrow function directly in onClick event handler of button
+18.Composing components
+19.Nested components
+20.Parent to child data transfer
+21.React Developer tools
+22.State vs props
+props passed data (input data) to component.It is readonly.Cant change value of props.To change props value assign to state
+state :local to specific component cant access by another
+23.Raising and handling events
+Ex : Delete counter is done by using event onDelete from counter component to counterList i.e child to parent relationship
+and using filter method of array to change state
+24.Removing local state in child component to reset counter and creating only one state in parent .Thischild component is called controlled component.In this method child contain data through props and parent contain data through event handlers
+25.Removing local state using counterAttr in parent component and using it in both parent and child files and accessing them in child by "props"
+26.Lift the state up/Multiple components in sync means if two child  components need to interact but they dont have parent child relationship so concept of "lift the state up" is used in which state is moved to parent of both component
+Example: navbar and counterlistwithcommonstate are child of app.js so app.js will have common state obj
+27.Stateless functional compoennt means using funtion instead of class to render react compoentn
+27.Lifecycle hooks
+a. Mounting Phase :in this instance of react class is created and rendered on DOM
+Methods used in Mounting Phase are:
+constructor , render , compoentDidMount
+b. Update Phase : In this props or state is updated
+Methods :
+render , componentDidUpdate
+c. Unmounting phase : When compoent is delete from DOM like delete counter
+Methods
+componentWillUnmount
