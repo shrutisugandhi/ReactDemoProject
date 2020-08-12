@@ -59,6 +59,7 @@ class CounterListExtnd extends Component {
                 {this.state.counterslistArr.map((counterarr, index) => (
                     <span>
                         Index :{index}{" "}
+                        {/* Here After iterating "counterslistArr" through "map" it is passed into child component as attr prop (counterAttr) and this is accessed in child using props */}
                         <Counterextend
                             //   key={counterarr.id}
                             //   value={counterarr.value}

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-class Counterextend extends Component {
+class CounterComponentWithLiftStateUp extends Component {
     render() {
         // let countClasses = this.getBadgeClasses();
-        console.log("props", this.props.counterAttr);
+        console.log("CounterComponentWithLiftStateUp", this.props);
         return (
             <div>
                 <span>props {this.props.children} </span>
@@ -27,7 +27,9 @@ class Counterextend extends Component {
                 <span>
                     <button
                         type="button"
-                       onClick={() => this.props.onDecrement(this.props.counterAttr)}
+                        onClick={() =>
+                            this.props.onDecrement(this.props.counterAttr)
+                        }
                         className="btn btn-success btn-sm"
                     >
                         -
@@ -53,7 +55,8 @@ class Counterextend extends Component {
 
     getBadgeClasses() {
         let countClasses = "badge m-4  badge-"; //Dynamic classes rendering on basis of countValue
-        countClasses += this.props.counterAttr.value <= 0 ? "warning" : "primary";
+        countClasses +=
+            this.props.counterAttr.value <= 0 ? "warning" : "primary";
         return countClasses;
     }
 
@@ -64,4 +67,4 @@ class Counterextend extends Component {
     }
 }
 
-export default Counterextend;
+export default CounterComponentWithLiftStateUp;
