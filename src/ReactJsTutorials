@@ -47,7 +47,7 @@ and using filter method of array to change state
 26.Lift the state up/Multiple components in sync means if two child  components need to interact but they dont have parent child relationship so concept of "lift the state up" is used in which state is moved to parent of both component
 Example: navbar and counterlistwithcommonstate are child of app.js so app.js will have common state obj
 27.Stateless functional compoennt means using funtion instead of class to render react compoentn
-27.Lifecycle hooks
+28.Lifecycle hooks
 a. Mounting Phase :in this instance of react class is created and rendered on DOM
 Methods used in Mounting Phase are:
 constructor , render , compoentDidMount
