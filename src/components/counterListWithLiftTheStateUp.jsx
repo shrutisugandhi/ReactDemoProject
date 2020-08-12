@@ -4,13 +4,20 @@ import React, { Component } from "react";
 import CounterComponentWithLiftStateUp from "./countercompoentWithLiftthestateup";
 class CounterListWithLiftStateup extends Component {
     render() {
+        console.log("CounterListWithLiftStateup Mounting Phase - Rendered");
         // console.log(this.state.counterslistArr.length);
-
+        const { //This is object argument destructuring in order to make code clean and to avoid large heirarchy in this.props to access value or events
+            onAppReset,
+            counterProps,
+            onAppDecrement,
+            onAppIncrement,
+        } = this.props;  //This is object argument destructuring in order to make code clean and to avoid large heirarchy in this.props to access value or events
         return (
             <React.Fragment>
                 <button
                     className="btn btn-primary btn-sm m-2"
-                    onClick={this.props.onAppReset}
+                   // onClick={this.props.onAppReset}
+                    onClick={onAppReset} //Example of Object destructuring by skipping this.props and declare it in line number 8
                 >
                     ResetCounter
                 </button>

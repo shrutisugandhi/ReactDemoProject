@@ -15,6 +15,26 @@ class App extends Component {
             { id: 4, value: 0 },
         ],
     };
+//Lifecycle hooks can be used only in class compoent
+    // LifeCycle Hooks Mounting Phase start
+    constructor() {
+        super(); //calling constructor of parent class
+        console.log("App-constructor"); //Constructor is called only one time when instance of class is created and in this properties can be initialise
+        // setState() cant be used in constructor bcoz it is used only when a compoennt is rendered and placed on DOM not before its rendering
+        //To use or set state in constructor using props so first props need to be passed as arg in constructor(props) and super(props) or else error occur
+        //this.state=this.props.abc;
+    }
+
+    componentDidMount() {
+        //Called After compoent is rendered into DOM and it can be used to make AJAX  call to fetch data
+        //AJAX Call
+        // this.setState({respdata});
+        console.log("App -Mounted ");
+    }
+
+    //Heirarchy of Mounting phase is constructor -> Render -> componentDidMount
+    //Mounting Phase Ended
+
     handleIncrement = (cnt) => {
         console.log("cnt", cnt);
         const arr = [...this.state.counterslistArr];
@@ -51,6 +71,7 @@ class App extends Component {
         this.setState({ counterslistArr: resetCount });
     };
     render() {
+        console.log(" Mounting Phase render---");
         return (
             <div className="App">
                 <header className="App-header">

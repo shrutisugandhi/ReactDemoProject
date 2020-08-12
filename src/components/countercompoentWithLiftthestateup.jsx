@@ -1,8 +1,23 @@
 import React, { Component } from "react";
 class CounterComponentWithLiftStateUp extends Component {
+    componentDidUpdate(prevProps, prevState) {
+        //Update Lifecycle hooks
+        console.log("prevProps", prevProps);
+        console.log("prevState", prevState);
+        // if(prevProps.counterAttr.value !==this.props.counterAttr.value){
+        //     //New Ajax call can be made
+        // }
+    }
+
+    //Unmount phase of lifecycle hooks
+    componentWillUnmount(){
+        console.log("UnMounting phase");
+    }
     render() {
+        console.log("CounterComponentWithLiftStateUp Mounting Phase- Rendered");
+
         // let countClasses = this.getBadgeClasses();
-        console.log("CounterComponentWithLiftStateUp", this.props);
+        //  console.log("CounterComponentWithLiftStateUp", this.props);
         return (
             <div>
                 <span>props {this.props.children} </span>
